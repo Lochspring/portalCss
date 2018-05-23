@@ -1,0 +1,2908 @@
+/* colors:
+#004B8D: base blue
+#003c71: blue variant
+#FDB813: gold
+#EAEAEA: ligth gray
+#cbcbcb: mid gray
+
+#aa0000: red
+#5e93c1 light blue
+#2DACD5: light green
+
+
+*/
+.ellucian-wpheader,
+.ellucian-webpart-menu {
+	display:none !important;
+}
+
+
+
+/* ====== Base Styles ====== */
+body {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	margin-top: 0px;
+	font-size: .875rem;
+	background: #fff none;
+}
+@media (min-width:767px) {
+	/*body {
+		margin-top:5px;
+	}*/
+}
+
+a,
+a:visited {
+	color: #004B8D;
+	text-decoration: none;
+}
+a:hover, a:focus {
+    color: #0078a0;
+    text-decoration: none;
+}
+
+.t-grid-highlight a, 
+.t-grid-highlight a:visited {
+	color:#5e93c1;
+}
+.t-grid-highlight a:hover,
+.t-grid-highlight a:focus {
+	color:#fdb813;
+}
+
+
+.ms-h1,
+h1,
+.ms-h2,
+h2,
+.ms-h3,
+h3,
+.ms-h4,
+h4,
+.ms-h5,
+h5,
+.ms-h6,
+h6,
+.ms-rtestate-field h1, h1.ms-rteElement-H1, .ms-rtestate-field h2, h2.ms-rteElement-H2 {
+	line-height: 0.9;
+    font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+    color: #004B8D;
+    text-transform: uppercase;
+    margin: 0 0 0.46875rem;
+	
+}
+
+
+.t-grid-highlight .ms-h1,
+.t-grid-highlight h1,
+.t-grid-highlight .ms-h2,
+.t-grid-highlight h2,
+.t-grid-highlight .ms-h3,
+.t-grid-highlight h3,
+.t-grid-highlight .ms-h4,
+.t-grid-highlight h4,
+.t-grid-highlight .ms-h5,
+.t-grid-highlight h5,
+.t-grid-highlight .ms-h6,
+.t-grid-highlight h6,
+.t-grid-highlight .ms-rtestate-field h1, .t-grid-highlight h1.ms-rteElement-H1, .t-grid-highlight .ms-rtestate-field h2, .t-grid-highlight h2.ms-rteElement-H2 {
+	color:#ffffff;
+}
+
+h1,
+.h1 {
+    font-size: 2.4375rem
+}
+
+@media only screen and (min-width: 48em) {
+    h1,
+    .ms-h1 {
+        font-size: 2.75rem
+    }
+}
+
+h2,
+.ms-h2 {
+    font-size: 1.75rem
+}
+
+h3,
+.ms-h3 {
+    font-size: 1.6rem
+}
+
+h4,
+.ms-h4 {
+    font-size: 1.4rem
+}
+
+h5,
+.ms-h5 {
+    font-size: 1.2rem
+}
+
+h6,
+.ms-h6 {
+    font-size: 1rem
+}
+
+ul, ol {
+	padding: 0 0 20px 35px;
+	margin: 0;
+}
+
+p, .ms-rtestate-field p, p.ms-rteElement-P {
+	margin: 0px 0px 1.5em;
+}
+
+
+/* Bootstrap Overrides (margin expansion) */
+.container-fluid {
+	padding:0px 20px;
+}
+.row {
+	margin-left:-20px;
+	margin-right:-20px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.btn {
+	-webkit-box-flex:0;
+	    -ms-flex:0 0 auto;
+	        flex:0 0 auto;
+	padding: 8px 20px;
+	-webkit-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+	text-decoration:none;
+	font-weight:normal;
+	font-family:"Proxima N W01 Bold", Helvetica, Arial, sans-serif;
+	border-radius:0px;
+	font-size:0.875rem;
+	border-width:0px;
+	cursor:pointer;
+}
+
+a.btn-primary {
+    background-color: #004b8d;
+	background-image: -webkit-gradient(linear, right top, left top, from(#004b8d), color-stop(47%, #004b8d), color-stop(47%, #fdb813), to(#fdb813));
+	background-image: -webkit-linear-gradient(right, #004b8d, #004b8d 47%, #fdb813 47%, #fdb813);
+	background-image: -o-linear-gradient(right, #004b8d, #004b8d 47%, #fdb813 47%, #fdb813);
+	background-image: linear-gradient(to left, #004b8d, #004b8d 47%, #fdb813 47%, #fdb813);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    color: #ffffff;
+}
+a.btn-primary:hover {
+	color:#004b8d;
+	text-decoration:none;
+	background-position: 0% 0%;
+}
+
+.t-grid-highlight a.btn-primary {
+    background-color: #ffffff;
+	background-image: -webkit-gradient(linear, right top, left top, from(#ffffff), color-stop(47%, #ffffff), color-stop(47%, #fdb813), to(#fdb813));
+	background-image: -webkit-linear-gradient(right, #ffffff, #ffffff 47%, #fdb813 47%, #fdb813);
+	background-image: -o-linear-gradient(right, #ffffff, #ffffff 47%, #fdb813 47%, #fdb813);
+	background-image: linear-gradient(to left, #ffffff, #ffffff 47%, #fdb813 47%, #fdb813);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    color: #004b8d;
+}
+
+.panel-group .panel,
+.panel {
+	background-color:transparent;
+	border-width:0px;
+	border-radius:0px;
+	box-shadow:none;
+}
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.panel-body {
+	padding:0px;
+}
+
+
+
+
+/* ====== Logo ====== */
+.ms-core-brandingText {
+	margin: 20px auto;
+    display: block;
+    padding-left: 0px;
+    text-align: center;
+    width: 85%;
+    height: 35px;
+   background:url('/Style Library/Images/wne long 4 clr.png') no-repeat 50% 0px;
+	background-size: contain;
+    overflow: hidden;
+}
+
+.ms-core-brandingText img {
+	position: absolute;
+	top: -9999px;
+}
+
+
+@media (min-width:767px) {
+	.ms-core-brandingText {
+		margin: 10px 20px;
+		text-align:left;
+		width: 400px;
+		height: 70px;
+        background-position:0px 50%;
+	}
+}
+
+
+/* ====== Site Header Bar ====== */
+.top-bar {
+	background-color:#004b8d;
+	background-image:none;
+	height:5px;
+	display:none;
+}
+
+
+/* Inserted div to contain suitebar and ribbon row to prevent image tiling bug */
+.ellucian-header-wrapper {
+background-color:#ffffff;
+}
+
+/* Sharepoint header elements */
+#suiteBarLeft,
+#suiteBarRight,
+#suiteBar
+#suiteBar,
+#s4-ribbonrow {
+	background: transparent none;
+	    font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+
+#s4-ribbonrow {
+	position:static;
+}
+
+#suiteBarLeft,
+#suiteBarRight,
+#suiteBar {
+	display:block;
+}
+
+#suiteBar {
+	height:auto;
+	border-top:30px solid #ededed;
+}
+
+/* bottom border of sticky page header */
+.ms-cui-topBar2 {
+	border-bottom: 1px solid #8c8c8c;
+}
+/* Inner div of leftside links on header */
+.ms-cui-TabRowLeft {
+	padding-top:10px;
+}
+/* Sharepoint tools link colors (overriding inlie styles for browser, Publish, library, etc ) */
+.ms-browseTab.ms-cui-tt-s > .ms-cui-tt-a > .ms-cui-tt-span, 
+.ms-cui-tt-a > .ms-cui-tt-span {
+	color:#004B8D !important;
+}
+
+
+@media (min-width:767px) {
+	.ellucian-header-wrapper {
+		border-top:0px solid #fff;
+	}
+	#s4-ribbonrow {
+		position:relative;
+	}
+	
+	#suiteBarLeft,
+	#suiteBarRight {
+		display:table-cell;
+	}
+	#suiteBar {
+		/*display:table-row;
+		height:40px;*/
+		border-top:0px;
+		
+	}
+	
+	/*.top-bar {
+		display:block;
+	}*/
+}
+
+
+/* ====== "Suite" links (Newsfeed, etc) ====== */
+/* Gear, login, etc in upper right */
+#DeltaSuiteBarRight {
+	background-color: #ededed;
+	position:absolute;
+	top:0px;
+	right:45px;
+}
+#DeltaSuiteLinks {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 100%;
+    background-color: #ededed;
+	border-top:1px solid #d6d6d6;
+    padding: 10px;
+	text-align:center;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+/* Suite link styles, with manually added link styles available */
+.ms-core-suiteLink-a,
+.ms-core-suiteLink-a:visited,
+#suiteLinksBox .ms-core-suiteLink-a:hover,
+a.ms-core-suiteLink-disabled {
+	letter-spacing: normal;
+	word-spacing: normal;
+	color:#000000;
+	text-decoration:none;
+	padding:0px 5px;
+}
+
+/*  border between links */
+.ms-core-suiteLink {
+	line-height: 1em;
+	letter-spacing: -4px;
+	word-spacing: 0px;
+	color:#000000;
+}
+.ms-core-suiteLink-a:hover {
+	color:#c44459;
+	background-color:transparent;
+}
+
+#suiteLinksBox {
+	margin-top: 0px;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+@media (min-width:767px) {
+	#DeltaSuiteLinks {
+		display: none;
+		position: static;
+		width: auto;
+		background-color: transparent;
+		padding: 8px 0px;
+		text-align:right;
+		border-top-width:0px;
+		vertical-align:top;
+	}
+	#DeltaSuiteBarRight {
+		position:static;
+	}
+	.ms-core-suiteLink-a,
+	.ms-core-suiteLink-a:visited,
+	#suiteLinksBox .ms-core-suiteLink-a:hover,
+	a.ms-core-suiteLink-disabled {
+		color:#ffffff;
+		padding:0px 8px;
+	}
+
+	/*  border between links */
+	.ms-core-suiteLink {
+		color:#ffffff;
+	}
+
+}
+
+/* ====== Site tools (Follow, Sync, Edit, Etc) ====== */
+.ms-promotedActionButton {
+	display:none!important;
+}
+
+/* Set link and icon colors */
+.ms-promotedActionButton-text,
+.ms-promotedActionButton:hover .ms-promotedActionButton-text,
+.ms-promotedActionButton-text:before,
+.ms-qatbutton a:after  {
+	color: #004B8D;
+}
+
+/* hide image icons from Sharepoint */
+.ms-promotedActionButton-icon,
+.ms-qatbutton a > span {
+	display: none !important;
+}
+
+/* Add font icons before items in this area */
+.ms-promotedActionButton-text:before,
+.ms-qatbutton a:after {
+	display: inline-block;
+	font: normal normal normal 16px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding: 0px 8px 0px 7px;
+	vertical-align: middle;
+}
+/* Select icons for each special button */
+#ctl00_site_share_button .ms-promotedActionButton-text:before {
+	content: "\f1e0";
+}
+#site_follow_button .ms-promotedActionButton-text:before {
+	content: "\f006";
+}
+#ctl00_SyncPromotedAction .ms-promotedActionButton-text:before {
+	content:"\f021";
+}
+#ctl00_PageStateActionButton .ms-promotedActionButton-text:before {
+	content:"\f040";
+}
+#fullscreenmode a:after {
+	content: "\f065";
+}
+#exitfullscreenmode a:after {
+	content: "\f066";
+}
+/* fix misalignment of "focus" button */
+.ms-qatbutton,
+.ms-qatbutton a {
+	height: auto !important;
+}
+@media (min-width:767px) {
+	.ms-promotedActionButton {
+		display:inline-block!important;
+	}
+}
+
+/* Special for SCC:  Hide follow button.  Important required to deal with inline styling. */
+#site_follow_button {
+	display:none !important;
+}
+
+
+/* ====== Notification Center Badge styles ======*/
+#elluciannotificationscenter {
+	position:absolute;
+	top:8px;
+	right:0px;
+}
+
+.notification-center a {
+	text-decoration: none;
+}
+.notification-center .btn {
+	background-color:transparent;
+}
+.notification-center .badge-warning {
+	background-color: #aa0000;
+}
+#suiteBarButtons, #fullscreenmode, #elluciannotificationscenter .nc-label {
+		display: none;
+	}	
+@media (min-width:767px) {
+	#elluciannotificationscenter {
+		position:static;
+	}
+	.notification-center .btn {
+		background-color:#ededed;
+	}
+
+	#suiteBarButtons, #fullscreenmode, #elluciannotificationscenter .nc-label {
+		display: inline-block;
+	}	
+}
+
+
+/* ====== Page Title area, including page title unit, etc ======*/
+/* background color for Title row:  includes bradecrumbs, page title, etc. */
+#s4-titlerow {
+	background-color: #004B8D;
+	border-bottom:2px solid #FDB813;
+	height:auto;
+}
+/* Rebulding header for mobile.  Fixes search box mispositioning, and alows room for suitelinks. */
+#s4-titlerow .headtitle {
+	float:none!important;
+}
+#s4-titlerow .ellucian-search-box {
+	float:none!important;
+}
+#all-search #SearchBox {
+	float:none;
+	text-align:center;
+	background:transparent;
+}
+.ellucian-search-box .ms-srch-sb-border {
+	width:100%;
+}
+#s4-titlerow .ellucian-search-box .ms-srch-sb > input {
+	width:80%;
+}
+
+#pageTitle, .ms-core-pageTitle, .ms-core-pageTitle a {
+	color: #ffffff;
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding-top: 10px;
+	text-decoration:none;
+}
+#pageTitle {
+	font-size: 2em;
+	font-weight:400;
+}
+
+ .ms-rtestate-field {
+	 padding:1px;
+ }
+ .ms-listviewtable  .ms-rtestate-field {
+	padding:0px;
+ }
+ 
+@media (min-width:767px) {
+	
+	#s4-titlerow .ellucian-search-box .ms-srch-sb > input {
+		width:200px;
+	}
+	#s4-titlerow .headtitle {
+		float:left!important;
+	}	
+	#s4-titlerow .ellucian-search-box {
+		float:right!important;
+	}
+	#all-search #SearchBox {
+		float:right;
+		text-align:left;
+	}
+	.ellucian-search-box .ms-srch-sb-border {
+		width:auto;
+	}
+
+}
+
+/*  ===== Breadcrumbs =====  */
+.s4-breadcrumb {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-size:1.15em;
+}
+
+
+ul.s4-breadcrumb a.s4-breadcrumbNode,
+ul.s4-breadcrumb a.s4-breadcrumbRootNode,
+ul.s4-breadcrumb a.s4-breadcrumbCurrentNode {
+	text-decoration: none;
+	color:#ffffff;
+	display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position:relative;
+	padding:0px 5px 0px 0px;
+}
+
+
+/* hide text of "home" link  */
+ul.s4-breadcrumb > li:first-child > a {
+	font-size: 1px;
+	letter-spacing: -1px;
+	color: transparent;
+}
+ /* icon fonts for breadcrumbs */
+ul.s4-breadcrumb > li:first-child > a:before ,
+ul.s4-breadcrumb .s4-breadcrumb-arrowcont:before,
+ul.s4-breadcrumb > li.s4-breadcrumbCurrentNode:after {
+	display: inline-block;
+	font: normal normal normal 20px/26px FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: middle;
+	
+}
+
+/* Display icon for home link */
+ul.s4-breadcrumb > li:first-child > a:before {
+	content: "\f015";
+	color: #FDB813;
+	line-height:26px;
+}
+/* hide Arrow image for breadcrumb */
+ul.s4-breadcrumb .s4-breadcrumb-arrowcont {
+	background-image: none;
+	width: auto;
+	height:auto;
+}
+/* Display arrow icon for breadcrumb (colorable, changeable). */
+ul.s4-breadcrumb .s4-breadcrumb-arrowcont:before,
+ul.s4-breadcrumb > li.s4-breadcrumbCurrentNode:after {
+	content: "\f0da";
+	color: #000000;
+	padding: 0px 5px 0px 7px;
+	line-height:26px;
+}
+
+/* SS Style breadcrumb addon */
+ul.s4-breadcrumb a.s4-breadcrumbNode,
+ul.s4-breadcrumb a.s4-breadcrumbRootNode,
+ul.s4-breadcrumb > li.s4-breadcrumbCurrentNode a.s4-breadcrumbCurrentNode
+{
+    padding: 0px 15px 0px 10px;
+    background-color: #ffffff;
+	color:#004b8d;
+}
+ul.s4-breadcrumb a.s4-breadcrumbNode,
+ul.s4-breadcrumb a.s4-breadcrumbCurrentNode {
+	padding: 0px 15px 0px 25px;
+	
+	
+}
+
+
+
+/* hide Arrow image for breadcrumb */
+ul.s4-breadcrumb .s4-breadcrumb-arrowcont {
+	display:none;
+}
+
+ul.s4-breadcrumb a.s4-breadcrumbNode:after ,
+ul.s4-breadcrumb a.s4-breadcrumbRootNode:after,
+ul.s4-breadcrumb > li.s4-breadcrumbCurrentNode a.s4-breadcrumbCurrentNode:after {
+    content: " ";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-width: 1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#004B8D #004B8D transparent transparent;
+	background-color:#ffffff;
+    right: -10px;
+    top: 4px;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+#DeltaPlaceHolderPageTitleInTitleArea {
+	display:none;
+}
+
+/* ====== Main Body ====== */
+/* colorize whole body including under the footer bar */
+#s4-workspace {
+	background-color:#f6f6f6;
+     
+    
+}
+/* colorize space between header and footer */
+#s4-bodyContainer {
+	background-color:#ffffff;
+
+}
+.ellucian-s4workspace-globalnavshown #s4-bodyContainer {
+	margin-left:0px;
+}
+#pageContent {
+	border-top-width:0px;
+}
+/* Repair "overlay" color" */
+#mainbody.ellucian-page-background {
+	background-color: transparent;
+}
+
+
+.ms-dialogBody .ms-tv-item:link, .ms-dialogBody .ms-tv-item:visited {
+	color:#444;
+}
+.ms-core-webpartadder {
+	z-index:9999;
+}
+
+/* ====== Footer ====== */
+.client-footer *, .client-footer *:after, .client-footer *:before {
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+
+.client-footer {
+	background-color:#f6f6f6;
+    border-top:1px solid #003c71;
+	color:#333333;
+	position:relative;
+	font-weight: normal;
+	padding: 20px 20px 0;
+	margin:-1px -20px 0px;
+	
+	
+}
+.footer-address, .footer-copyright {
+	padding-left:0px;
+	font-weight:normal;
+	margin-bottom:1em;
+	text-align:center;
+}
+.footer-address a {
+	color:#003c71;
+}
+
+.footer-social {
+	text-align:center;
+	margin-bottom:20px;
+}
+.footer-social ul {
+	list-item-style:none;
+	padding:0px;
+}
+.footer-social li{
+	display: inline-block;
+	margin:0px 1em 0px 0px;
+}
+.footer-copyright {
+	background-color: #efefef;
+    padding: 10px;
+    margin: 0px -20px;
+}
+ 
+.footer-social .fa {
+	
+	font-size:2em;
+	text-align: center;
+	color: #004b8d;
+	background-color:transparent;
+	-webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+	
+}
+
+.footer-social .fa:hover {
+	
+	color:#fdb813;
+}
+
+.footer-action {
+	padding:0px 20px 20px;
+}
+.footer-action .btn {
+	margin-left:20px;
+	width:120px;
+}
+
+
+@media (min-width:768px) {
+	
+	.footer-address{
+		text-align:left;
+		
+	}
+	
+	.footer-social{
+		text-align:left;
+	}
+	.footer-social .fa {
+		
+		font-size:2em;
+	}
+	.footer-copyright {
+		margin-bottom:0;
+	}
+	.footer-logo {
+		position:absolute;
+		bottom:20px;
+		right:40px;
+	}
+}
+@media (min-width:992px) {
+	
+}
+@media (min-width:1200px) {
+	
+	
+}
+
+
+
+
+
+
+
+/* ====== Global Flyout Navigation ====== */
+/* Icon and color for the toggle button text */
+#ellucian-globalnav-tab a {
+	background-image:none;
+	background-color:#FDB813;
+	margin:0px 0px 0px;
+	padding:5px 8px 4px 15px;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#004B8D;
+	font-size:0.875rem;
+	line-height:1;
+	font-family:"Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	display:block;
+	z-index:9999;
+}
+/* Icon and color for the "hamburger" */
+#ellucian-globalnav-tab a:before {
+	content: "\f0c9";
+	display: inline-block;
+	font: normal normal normal 22px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding-right: 10px;
+	vertical-align: middle;
+	color: #004B8D;
+}
+
+@media (min-width:767px) {
+	
+	#ellucian-globalnav-tab a {
+		position:static;
+		
+        
+	}
+	
+}
+
+
+
+/* Flyout menu background color */
+#ellucian-globalnav-container {
+	background:#004b8d none;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	
+	top:51px;
+	/* -webkit-overflow-scrolling: touch; */
+}
+
+/* Search bar in global nav */
+
+#ellucian-globalnav-header > input {
+	background: #fff none;
+	color: #333;
+}
+#ellucian-globalnav-header:before {
+	content: "\f054";
+	display: inline-block;
+	font: normal normal normal 16px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: middle;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 6px;
+	color: #fdb813;
+}
+/* Fly out navigation item background */
+
+.ellucian-globalnav-item,
+.ellucian-globalnav-detailview li.ellucian-globalnav-item {
+	color: #ffffff;
+	background-color: transparent;
+	border-bottom-width:0px;
+}
+
+/* hover animation for all nav items */
+
+.ellucian-globalnav-item:hover,
+.ellucian-globalnav-detailview li.ellucian-globalnav-item:hover,
+.ellucian-globalnav-item:active,
+.ellucian-globalnav-detailview li.ellucian-globalnav-item:active,
+.ellucian-globalnav-item li.ellucian-globalnav-item:hover,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown:hover,
+.ellucian-globalnav-item li.ellucian-globalnav-item:active,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown:active {
+	-webkit-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+/* hover style for nav items */
+
+.ellucian-globalnav-item:hover,
+.ellucian-globalnav-detailview li.ellucian-globalnav-item:hover,
+.ellucian-globalnav-item:active,
+.ellucian-globalnav-detailview li.ellucian-globalnav-item:active {
+	color: #fdb813;
+}
+/* hover style for sub nav items */
+
+.ellucian-globalnav-item li.ellucian-globalnav-item:hover,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown:hover,
+.ellucian-globalnav-item li.ellucian-globalnav-item:active,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown:active {
+	color: #fdb813;
+}
+/* Font, color, and background for nav item:  expanded sub items */
+
+.ellucian-globalnav-item li.ellucian-globalnav-item,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown {
+	background-color: rgba(255,255,255,0.15);
+	border-bottom-width: 0px;
+	color:#ffffff;
+}
+.ellucian-globalnav-item li.ellucian-globalnav-item:last-child,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown:last-child {
+	border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* Second tier detail nav:  Breadcrumb style */
+
+#ellucian-globalnav-detail-breadcrumb a {
+	color: #ffffff;
+	padding: 10px 30px;
+	background-image: none;
+}
+/* Second tier detail nav:  Breadcrumb arrow replacer */
+
+#ellucian-globalnav-detail-breadcrumb a:before {
+	color: #fdb813;
+	content: "\f053";
+}
+/* hide default arrow image on expandable items */
+
+#ellucian-globalnav-content > ul > li.ellucian-globalnav-item-topdropdown > div > a > h5,
+#ellucian-globalnav-content > ul > li.ellucian-globalnav-item-topdropdown > div > a.ellucian-globalnav-expanded > h5,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown,
+.ellucian-globalnav-detailview .ellucian-globalnav-item.ellucian-globalnav-item-detaildown {
+	background-image: none;
+}
+/* Arrow icon replacer at all levels */
+
+#ellucian-globalnav-content h5:after,
+#ellucian-globalnav-content h5:before,
+#ellucian-globalnav-content a:before {
+	display: inline-block;
+	font: normal normal normal 1.1em/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding: 0px;
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 0px;
+}
+/* Arrow icon replacer at all levels: non expanded */
+
+#ellucian-globalnav-content > ul > li.ellucian-globalnav-item-topdropdown > div > a > h5:before,
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown > a > h5:after,
+.ellucian-globalnav-detailview .ellucian-globalnav-item.ellucian-globalnav-item-detaildown > a > h5:after {
+	content: "\f054";
+	color: #fdb813
+}
+/* fix padding on expanded items */
+
+.ellucian-globalnav-item .ellucian-globalnav-item.ellucian-globalnav-item-detaildown > a > h5:after,
+.ellucian-globalnav-detailview .ellucian-globalnav-item.ellucian-globalnav-item-detaildown > a > h5:after {
+	margin-left: 0;
+	right: 10px;
+}
+/* Arrow icon replacer at all levels: expanded */
+
+#ellucian-globalnav-content > ul > li.ellucian-globalnav-item-topdropdown > div > a.ellucian-globalnav-expanded > h5:before {
+	color: #fdb813;
+	content: "\f078";
+}
+/* Font and color for nav items: non-expanded */
+
+#ellucian-globalnav-content > ul > li > div  a,
+#ellucian-globalnav-content > ul > li > div a > h5,
+#ellucian-globalnav-content h5,
+.ellucian-globalnav-searchresults ul a {
+	color: #ffffff;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	text-transform: none;
+	text-decoration: none;
+	font-weight: normal;
+	font-size:0.875rem;
+	margin-bottom:0px;
+}
+/* Font, color, and background for nav item:  expanded header */
+/* Second tier detail nav:  Nav item header */
+
+#ellucian-globalnav-content > ul > li.ellucian-globalnav-item-topdropdown > div > a.ellucian-globalnav-expanded > h5,
+#ellucian-globalnav-detail-menutitle > h5,
+.ellucian-globalnav-searchresults-header {
+	background-color: rgba(255,255,255,0.15);
+	color: #fdb813;
+	font-weight: bold;
+	
+}
+.ellucian-globalnav-searchresults-header {
+	margin-top: 10px;
+}
+
+/* ====== General Webpart Styles ====== */
+/* hide Ellucian default border.  If shadow is desired, apply here*/
+.ellucian-webpart-border {
+	border-width:0px;
+	/*border-radius:5px;*/
+	
+}
+
+/* Apply webpart background color and border.  This is the "CONTENT" of the webpart or webpart tab.   If rounded corners are used, apply here to bottom left and righ corners only. */
+.ellucian-containerwebpart .ellucian-contained-webpart .ms-WPBody,
+.ms-WPBorder,
+.ms-WPBorderBorderOnly {
+	/*border-radius:0px 0px 5px 5px;*/
+	border-width:0px;
+	border-style:solid;
+	border-color:#ededed;
+	background-color:transparent;
+	padding:0px;
+    -webkit-box-shadow:none;
+            box-shadow:none;
+}
+.ms-webpartzone-cell {
+	background-color:transparent;
+}
+
+/* overrides to remove excess bordering from tabbing and nesting of components */
+.ellucian-contained-webparts.ellucian-webpart-border,
+.ellucian-webpart-border .ms-webpartzone-cell,
+.ellucian-containerwebpart .ms-webpartzone-cell,
+.ellucian-containerwebpart .ellucian-containerwebpart{
+	background-color:transparent;
+	border-radius:0;
+	border:0px;
+	-webkit-box-shadow:none;
+	        box-shadow:none;
+}
+
+
+
+/* General header font */
+.ms-webpart-chrome-title .ms-webpart-titleText,
+.ms-webpart-chrome-title .ms-webpart-titleText a,
+.ms-webpart-chrome-title .ms-webpart-titleText a:visited,
+.ellucian-containerwebpart-tab > a {
+	color: #004b8d;
+	font-weight: normal;
+	font-size: 1.75rem;
+	font-family:"ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	line-height:1.5;
+	margin: 0px;
+	padding: 0px 20px 0px 0px;
+    
+	text-decoration: none;
+}
+.ms-webpart-chrome-title .ms-webpart-titleText a {
+	padding-left:0px;
+	font-size:1em;
+}
+.js-webpart-titleCell {
+	margin-top:0px;
+}
+/* General header color.  If rounded corners are used, apply here to top left and righ corners only. */
+.ms-webpart-chrome-title {
+	 background-color: #f6f6f6;
+	border-style:solid;
+	border-width:0px 0px 0px;
+	border-color:#eaeaea;
+	height: 44px;
+	margin: 0 0 10px;
+	padding: 0;
+	line-height: 1;
+   
+}
+
+
+.ms-webpart-chrome-title h2:before {
+    content: "\f1b0"; /* plug */
+    display: inline-block;
+    font: normal normal normal 22px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    
+    background-color: #004b8d;
+    border-left: 5px solid #fdb813;
+    margin-right: 10px;
+    color: #ffffff;
+    padding: 11px;
+    vertical-align: top;
+	
+}
+
+.t-grid-highlight .ms-webpart-chrome-title {
+	background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+.t-grid-highlight .ms-webpart-chrome-title .ms-webpart-titleText,
+.t-grid-highlight .ms-webpart-chrome-title .ms-webpart-titleText a,
+.t-grid-highlight .ms-webpart-chrome-title .ms-webpart-titleText a:visited,
+.t-grid-highlight .ellucian-containerwebpart-tab > a {
+	 color: #ffffff;
+}
+
+.t-grid-highlight .ms-webpart-chrome-title h2:before {
+	background-color: #fdb813;
+    border-left: 5px solid rgba(0,0,0,0.4);
+}
+
+/*  tab container.   If rounded corners are used, apply here to top left and righ corners only. */
+.ellucian-containerwebpart-tabcontainer {
+	/*border-radius:5px 5px 0px 0;*/
+	border-style:solid;
+	border-width:1px 1px 1px 1px;
+	border-color:#eaeaea #eaeaea #8c8c8c;
+	height:47px;
+	overflow:hidden;
+}
+/* inactive tab background color */
+.ellucian-containerwebpart-tab {
+	background-color: #dedede;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	font-size: 1.75rem;
+	line-height:35px;
+	border-left-color:#b8b8b8;
+}
+
+/*  inactive Tab text color */
+.ellucian-containerwebpart-tab  a {
+	color: #004b8d;
+	font-size:1em;
+	padding-left: 10px;
+}
+/* currently active tab background color */
+.ellucian-containerwebpart-tab-active {
+	background-color:transparent;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+/* Currently active tab text color */
+.ellucian-containerwebpart-tab-active > a {
+	color: #004b8d;
+}
+/* Tab hover color */
+.ellucian-containerwebpart-tab:hover {
+	background-color:#FDB813;
+}
+/* tab hover text color */
+.ellucian-containerwebpart-tab:hover > a {
+	color: #004b8d;
+}
+/* remove excess border on right edge of tab set */
+.ellucian-containerwebpart-tab:last-child {
+    border-right: 0px solid #B3B3B3;
+}
+
+/* Webpart menu arrows (use when dark gray bg is in place for active webaprt headers ) */
+
+.ms-webpart-menuLink {
+	overflow: visible;
+}
+.ms-webpart-menuLink:before {
+	content: "\f0d7";
+	display: inline-block;
+	font: normal normal normal 14px/1.2 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding: 0px 0px 0px 0px;
+	width: 1.28571429em;
+	color: #aa0000;
+	margin-left: -5px;
+	margin-top: -5px;
+	position: absolute;
+}
+.ms-webpart-menuArrowSpan img {
+	display: none;
+}
+/* ellucian webpart menus (disappears on edit of page) */
+.ellucian-webpart-menu {
+	height:26px;
+	top:12px;
+}
+.ellucian-contained-webpart .ellucian-webpart-menu {
+	top:-35px;
+}
+/* Get secpond of two tabs */
+.ellucian-contained-webpart:nth-child(3):nth-last-child(1) .ellucian-webpart-menu {
+	right: 50%;
+}
+/* Get secpond of three tabs */
+.ellucian-contained-webpart:nth-child(3):nth-last-child(2) .ellucian-webpart-menu {
+	right:33.5%
+}
+/* Get first of three tabs */
+.ellucian-contained-webpart:nth-child(4):nth-last-child(1) .ellucian-webpart-menu {
+	right:66.5%
+}
+
+
+.ellucian-contained-webpart .ellucian-wpheader {
+	height:auto !important;
+}
+.ellucian-webpart-menu a.dropdown-toggle,
+.ellucian-webpart-menu .btn.btn-mini {
+	background-color: transparent;
+	border-width:0px;
+	height:24px;
+	width:24px;
+	line-height:27px;
+	border-top-right-radius: 12px !important;
+    border-top-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+	padding:0px;
+	overflow:hidden;
+	color:#004b8d;
+}
+.ellucian-webpart-menu .btn.btn-mini img {
+	position:absolute;
+	left:-9999px;
+}
+
+.ellucian-webpart-menu a.dropdown-toggle:hover,
+.ellucian-webpart-menu .btn.btn-mini:hover {
+	background-color:#fdb813;
+	color:#ffffff;
+}
+.ellucian-webpart-menu .btn.btn-mini:before {
+	content: "\f0d7";
+	display: inline-block;
+	font: normal normal normal 16px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	text-decoration:none;
+}
+
+.ellucian-webpart-menu a .caret {
+	display:none;
+}
+
+
+
+/* ====== Ellucian web part add new links ====== */
+.add-manage-webpart,
+.cmm-only .ms-vb.ms-aggrwebpartcell > a,
+.ms-addnew > a  {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	color: #004b8d;
+}
+/* if using rounded corners */
+.add-manage-webpart {
+	border-radius:0px 0px 5px 5px;
+}
+.add-manage-webpart.show {
+	background-color:#004b8d; 
+	border-radius:0px;
+}
+.add-manage-webpart-lebel:after {
+	border-top-color:#004b8d;
+}
+.add-manage-webpart-lebel:before {
+	background-image: none;
+}
+.add-manage-webpart-links a:hover {
+	background-color: #efefef;
+}
+
+
+/* ====== "Quicklaunch" link set ====== */
+#sideNavBox {
+	background-color: transparent;
+    padding:0px 20px;
+	border-top-width:0px;
+    border-bottom-width:0px;
+	margin:0px 0px;
+	box-sizing:border-box;
+}
+
+#sideNavBox .selected.menu-item {
+	background-color:#fdb813;
+	color:#004b8d
+}
+.ms-core-navigation {
+	
+}
+#sideNavBox .ms-core-navigation {
+	display:none;
+	margin:20px 0;
+	background-color:#EAEAEA;
+}
+#sideNavBox .ms-core-navigation ul {
+	padding-bottom:0px;
+}
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenu-item,
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenuEdit,
+.ms-core-listMenu-heading,
+.ms-tv-header {
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: "Proxima N W01 Bold", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    padding: 0.9375rem 1.40625rem;
+	
+
+   
+	border-top:1px solid #ffffff;
+}
+
+.ms-core-listMenu-verticalBox li.static > ul.static > li.static > .ms-core-listMenu-item {
+		border-top:1px solid #ffffff;
+		
+}
+
+
+.ms-core-listMenu-item,
+.ms-core-listMenu-item:link,
+.ms-core-listMenu-item:visited,
+.ms-tv-item:link,
+.ms-tv-item:visited,
+.ms-tv-header:link,
+.ms-tv-header:visited {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	text-decoration:none;
+}
+
+li > a.ms-core-listMenu-item:hover, 
+li > a.ms-core-listMenu-item:active {
+	color:#004b8d;
+	background: #cbcbcb;
+    -webkit-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, 
+.ms-core-listMenu-selected:link, 
+.ms-core-listMenu-selected:visited, 
+.ms-core-listMenu-selected {
+		background-color:#fdb813;
+	color:#004b8d
+}
+#sideNavBox .sidenav-allsitecontent
+ {
+    display: none;
+ }
+@media (min-width:992px) {
+	#sideNavBox.col-md-3 {
+		width:25%;
+	}
+	#sideNavBox .ms-core-navigation {
+		display:block;
+	}
+}
+ 
+/* ======= My Alerts Web Part =====*/
+.ellucian-myalertswebpart .title {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+.ellucian-myalertswebpart .notification-center .notification-message {
+	padding:0px;
+	margin:0px;
+}
+.ellucian-myalertswebpart .notification-center li {
+	border-bottom:1px solid rgba(0,0,0,0.2);
+}
+.ellucian-myalertswebpart .notification-center li:last-child {
+	border-bottom-width:0px;
+}
+
+/* ======= MY WEEK WEB PART ======= */
+.ellucian-myweekwebpart {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+
+.ellucian-myweek-dateselectionlist-date .today:not([style*="display: none"]) + div {
+	display:none;
+}
+
+.ellucian-myweek-dateselectionlist-selected .today {
+	background-color: #004b8d;
+	color: #ffffff;
+}
+
+.safari .ellucian-myweek-detail-header,
+.ellucian-myweek-detail-header {
+    max-height: 67px;
+    border-bottom: 3px solid #333;
+}
+
+/* My Week day view today border bottom */
+
+.ellucian-myweek-dateselectionlist-date.ellucian-myweek-dateselectionlist-selected div:nth-child(3) {
+	border-bottom: 10px solid #004b8d;
+	color: #003976;
+}
+/* My Week day view selected day border top */
+
+.ellucian-myweek-dateselectionlist-selected div.today[style="display: none;"] + div:nth-child(2) {
+	background-color: #004b8d;
+	color: #ffffff;
+}
+/* My Week day view other day border top */
+
+.ellucian-myweek-dateselectionlist-date div:nth-child(2) {
+	background-color: #818181;
+	color: #ffffff;
+}
+/* My Week day view other day background */
+
+.ellucian-myweek-dateselectionlist-date {
+	background-color: #ffffff;
+}
+/* My Week day view other day border bottom */
+
+.ellucian-myweek-dateselectionlist-date div:nth-child(3) {
+	border-bottom: 10px solid #efefef;
+	color: #818181;
+}
+/* My Week week view today heading */
+
+.ellucian-myweek-list-body li h3.today {
+	background-color: #004b8d;
+	color: #ffffff;
+}
+/* My Week week view other day heading */
+
+.ellucian-myweek-list-body li h3 {
+	background-color: #818285;
+	color: #ffffff;
+}
+/* My Week date selector title bar text */
+
+.ellucian-myweek-header {
+	background-color: #dfdfdf;
+}
+/* My Week date selector title bar text */
+
+.ellucian-myweek-header > span {
+	color: #444444;
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	font-size:1.4em;
+}
+
+.ellucian-myweekwebpart .event-details {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+.ellucian-myweekwebpart .event-details h6 {
+	margin-bottom:5px;
+}
+.ellucian-myweek-list-body li h3,
+.ellucian-myweek-list-body li h3.today {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-weight:normal;
+}
+
+/*  ====== Campus Announcements ======  */
+.ellucian-campusannouncement-body.sticky{
+	background-color: #f6f6f6;
+}
+.ellucian-campusannouncement-body.sticky .ellucian-campusannouncements-created{
+	background-color: #004b8d;
+	color:#ffffff;
+}
+.ellucian-campusannouncement-body.sticky .urgent{
+	background-color: transparent;
+	background-image:none;
+	  right: 0px;
+    top: 0px;
+}
+.ellucian-campusannouncement-body.sticky .urgent:after {
+	font: normal normal normal 18px/1 FontAwesome;
+    content: "\f12a";
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    color: #fff;
+}
+.ellucian-campusannouncement-body.sticky .urgent:before {
+	border-top: 40px solid #aa0000;
+    border-left: 40px solid transparent;
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 0px;
+    top: 0px;
+} 
+
+.ellucian-campusannouncements-title a {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+.ellucian-campusannouncements-created {
+	color:#555;
+}
+.ellucian-campusannouncements-created-date {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	
+}
+.ellucian-campusannouncements-created-date .month {
+	font-size:1.2em;
+	font-weight:400;
+}
+.ellucian-campusannouncements-created-date .day {
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	font-weight:300;
+}
+
+
+/*  ====== My Bookmarks ======  */
+.ellucian-mybookmarks-title {
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	font-weight:400;
+}
+.ellucian-mybookmarks-container ul li a {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	
+}
+
+
+
+/*  ====== My Team sites  ====== */
+.ellucian-myteamsites-title {
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	font-weight:400;
+}
+.ellucian-myteamsites-group a {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+/*  ====== My Classes  ====== */
+.ellucian-myclasses-class-container h5 {
+	padding-bottom: 5px;
+	border-bottom-color:#e8e8e8;
+}
+.ellucian-myclasses-class-title-wrapper > a {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+/* Assignment list */
+.ellucian-myclasses-container .ellucian-myclasses-class-container .ellucian-myclasses-assignment-list {
+	background-color:rgba(0,0,0,0.03);
+	margin-bottom:10px;
+}
+.ellucian-myclasses-assignment-list li a {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	color:#004b8d;
+	font-weight:normal;
+}
+.ellucian-myclasses-assignment {
+	padding:10px !important;
+}
+
+/*  ====== Campus News  ====== */
+.ellucian-campusnews-container {
+	background-color:transparent;
+}
+
+.ellucian-campusnews-title {
+	padding-bottom: 5px;
+	display: block;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+.ellucian-campusnews-title a {
+	color: #004b8d;
+}
+/* Attempting to fix text cutoff in stories */
+.ellucian-campusnews-description {
+	line-height:1.2em;
+	font-size:1em;
+}
+.ellucian-campusnews-container {
+	height:auto;
+}
+.ellucian-campusnews-details-container .ellucian-ellipsis {
+	height:auto !important;
+}
+.ellucian-campusnews-date-and-byline {
+	overflow:visible;
+}
+
+/*  ====== Campus Feeds ======  */
+
+.ellucian-campusfeedlist > li {
+	padding:5px 0px;
+}
+.ellucian-campusfeeds-articlelist {
+	margin:0px !important;	
+}
+.ellucian-campusfeeds-articlelist h5{
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
+
+.ellucian-campusfeeds-articlelist a:hover,
+.ellucian-campusfeeds-articlelist a:focus,
+.ellucian-campusfeeds-storydetail a:hover,
+.ellucian-campusfeeds-storydetail a:focus,
+.ellucian-campusfeeds-storyback:hover,
+.ellucian-campusfeeds-storyback:focus{
+	color: #004b8d;
+	text-decoration: underline;
+}
+.ellucian-campusfeeds-group-title {
+	font-weight:bold;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-size:0.875rem;
+}
+.ellucian-collapsible-header a {
+	text-decoration: none;
+}
+.ellucian-campusfeeds-summary {
+	padding:10px 0px;
+}
+.ellucian-campusfeeds-storydetail p {
+	margin:10px 0px;
+}
+.ellucian-campusfeeds-storyback,
+.ellucian-campusfeeds-storydetail a {
+	color: #004b8d;
+}
+.ellucian-campusfeeds-storyback {
+	padding:0px 25px 10px;
+	display:block;
+	background-position:left top;
+}
+
+/*  ====== Campus Events  ====== */
+.ellucian-campusevents-day-and-date {
+	background-color: #efefef;
+	color: #555;
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+}
+.ellucian-campusevents-date {
+	font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+	font-weight:300;
+}
+.ellucian-campusevents-month {
+	font-size: 1.2em;
+	font-weight: 400;
+}
+.ellucian-campuseventswebpart a {
+	color: #004b8d;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+
+/* ======  My To Do   ====== */
+/* My To Do alert bubble */
+
+.ellucian-mytodo-dateheader .badge-warning {
+	background-color: #eca154;
+}
+:first-child.ellucian-collapsible-header.ellucian-mytodo-dateheader .badge {
+	background-color: #eca154;
+}
+/* My To Do Today title bar */
+
+.ellucian-mytodo-today {
+	background-color: #efefef;
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color:#004b8d;
+	border-left-color:#231f20;
+}
+.ellucian-mytodowebpart .ellucian-collapsible-group .ellucian-mytodo-date-title {
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+
+
+
+.ellucian-mytodowebpart .ellucian-collapsible-group a.ellucian-collapsible-groupToggle {
+	color: #004b8d;
+}
+
+
+.ellucian-mytodo-list li {
+	background-color:#f8f8f8;
+}
+.ellucian-mytodos-notoday {
+	background-color:#f8f8f8;
+}
+.ellucian-mytodowebpart .btn.btn-mini {
+	margin:0px;
+}
+.ellucian-mytodowebpart .btn.btn-mini:first-child:before {
+	content: "\f0ab";
+
+}
+.ellucian-mytodowebpart .btn.btn-mini:nth-child(2):before {
+	content: "\f0a9";
+
+}
+
+.ellucian-mytodowebpart .btn.btn-mini.dropdown-toggle {
+	padding:0px;
+}
+
+/*====== UNREAD MESSAGES ======= */
+.ellucian-unreadmessages li a {
+	color: #004b8d;
+font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+}
+
+.ellucian-unreadmessageswebpart .total-count {
+	color: #eca154
+}
+
+.ellucian-unreadmessageswebpart .count > div {
+	background-color: #eca154
+}
+
+/* ====== SELF SERVICE MENU STYLES ====== */
+/* Arrow icon replacer at all levels */
+.ellucian-collapsible-header h5:before,
+.ellucian-selfservicemenuwebpart li ul li a:after, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li a:after {
+	display: inline-block;
+	font: normal normal normal 20px/1 FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding: 0px 5px 0px 7px;
+	position: absolute;
+	margin-left: -30px;
+	margin-top: -1px;
+}
+
+/* Toplevel  menu section header: Collapsed */
+.ellucian-selfservicemenuwebpart .ellucian-wptemplate-container .ellucian-collapsible-group-collapsed .ellucian-collapsible-header h5 {
+	color:#004b8d;
+	background-image:none;
+}
+.ellucian-selfservicemenuwebpart .ellucian-wptemplate-container .ellucian-collapsible-group-collapsed .ellucian-collapsible-header h5:hover {
+	background-color:#f6f6f6;
+}
+
+
+/* Toplevel  menu section header: expanded */
+.ellucian-selfservicemenuwebpart .ellucian-wptemplate-container .ellucian-collapsible-header h5 {
+	background-color:#004b8d;
+	background-image:none;
+	font-weight:400;
+	font-size:1.2em;
+}
+/* Arrowds for collapsed header */
+.ellucian-collapsible-header h5:before {
+	color: #ffffff;
+	content: "\f0d7";
+}
+.ellucian-collapsible-group-collapsed .ellucian-collapsible-header h5:before {
+	content: "\f0da";
+	color: #747474;
+}
+/* Sublevel  menu section header */
+.ellucian-selfservicemenuwebpart .ellucian-wptemplate-container .ellucian-selfservice-detailview h5.detail-view-title {
+		background-color:#004b8d;
+	color:#ffffff;
+	font-weight:400;
+}
+/* Container for expandable items */
+.ms-webpart-zone .ellucian-selfservicemenuwebpart .ellucian-wptemplate-container ul.ellucian-collapsible-body, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul {
+	background: transparent;
+	border-bottom:0px;										
+}
+
+/* Expanded list items */
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li,
+.ellucian-selfservicemenuwebpart li ul li {
+	background-color: #ffffff;
+    border-bottom: 1px solid #d3d3d3;
+	margin-left:0px;
+}
+/* hover state for expanded list items */
+.ellucian-selfservicemenuwebpart .ellucian-wptemplate-container .ellucian-collapsible-group-collapsed .ellucian-collapsible-header h5:hover ,
+.ellucian-selfservicemenuwebpart li ul li:hover, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li:hover {
+	background: #f6f6f6;
+    -webkit-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+	color:#004b8d;
+}
+/* links in expanded menu */
+.ellucian-selfservicemenuwebpart li ul li a, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li a {
+	color: #333333;
+	font: normal 1.1em   "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	text-transform:none;
+	text-decoration:none;	
+	border-bottom:1px;
+	position:relative;
+}
+/* hover state for expanded list links */
+.ellucian-selfservicemenuwebpart li ul li:hover a, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li:hover a {
+	color:#004b8d;
+	background-image:none;
+}
+
+
+.ellucian-selfservicemenuwebpart li ul li a:after, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li a:after {
+	display:none;
+	content: "\f0da";
+	color: #747474;
+}
+.ellucian-selfservicemenuwebpart li ul li:hover a:after, 
+.ellucian-selfservicemenuwebpart .ellucian-selfservice-detailview ul li:hover a:after {
+	display:block;
+	right:0px;
+	margin-left:0px;
+	top:9px;
+}
+
+
+
+/* ====== Web Advisor ====== */
+#webAdvisorTable a:link{
+	color: #0082ce;
+
+}
+#webAdvisorTable a:hover,
+#webAdvisorTablw a:focus {
+	color: #00C5FF;
+	text-decoration: underline;
+}
+
+
+/* summary links web part */
+.slm-layout-main,
+.slm-layout-main .link-item, 
+.slm-layout-main .link-item a, 
+.slm-layout-main .link-item a:link,
+.slm-layout-main .groupheader,
+.slm-layout-main .description {
+	
+	font-family: "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	font-size:0.875rem;
+}
+.slm-layout-main .groupheader.band {
+	background-color:#004b8d;
+	color:#ffffff;
+	padding:5px;
+}
+
+
+
+
+
+
+/* ====== SHAREPOINT LIST VIEWS ====== */
+/* List view column headers */
+.ms-headerCellStyleHover .ms-vh-div, .ms-headerCellStyleMenuOpen .ms-vh-div, .ms-headercellStylePressed .ms-vh-div {
+border-bottom: 1px solid #eaeaea;
+}
+.ms-vh-div, .ms-vh-div a{
+color: #004b8d;
+}
+.ms-headerCellStyleHover .ms-vh-div a, .ms-headerCellStyleHover .ms-vh-div span, .ms-headerCellStyleMenuOpen .ms-vh-div a, .ms-headerCellStyleMenuOpen .ms-vh-div span, .ms-headerCellStylePressed .ms-vh-div a, .ms-headerCellStylePressed .ms-vh-div span {
+color: #004b8d;
+}
+.ms-headerCellStyleHover .ms-vh-div, .ms-headerCellStyleMenuOpen .ms-vh-div, .ms-headerCellStylePressed .ms-vh-div {
+border-bottom: 1px solid #eaeaea;
+}
+.ms-headerCellStyleHover .ms-headerSortTitleLink:after, .ms-headerCellStyleMenuOpen .ms-headerSortTitleLink:after{
+border-color: #004b8d transparent transparent;
+}
+
+/* List view selected items */
+/* selected row color */
+.s4-itm-selected td, .ms-itmHoverEnabled:hover > *{
+background-color: #f5f5f5;
+}
+/* context menu ... on selected items */
+.s4-itm-selected .ms-list-itemLink-td, .s4-itm-selected:hover .ms-list-itemLink-td{
+background-color: #efefef;
+}
+/* context menu ... on hovered items */
+.ms-itmHoverEnabled:hover .ms-list-itemLink-td{
+background-color: #efefef;
+}
+/* check box */
+.s4-itm-selected > .ms-vb-imgFirstCell.ms-vb-imgFirstCell{
+background-color: #004b8d;
+border-right-color: #fdb813;
+}
+
+/* Site Contents */
+.ms-metadata, .ms-descriptiontext{
+color: #353535;
+}
+
+
+/* ======= SEARCH RESULTS ======= */
+/* Search Item hover */
+.ms-srch-item:hover, .ms-srch-resultHover:hover, .edisc-SearchResultItemContainer:hover, .ms-srch-itemSelected{
+background-color: #efefef !important;
+}
+
+/* Search item hover bubble */
+.ms-srch-hover-innerContainer{
+border: 2px solid #004876 !important;
+}
+.ms-srch-hover-arrow{
+border-color: transparent transparent #004876 #004876 !important;
+}
+.ms-srch-hover-actions{
+border-top: 1px solid #004876;
+}
+
+/* Search Item Refiners Heading */
+.ms-ref-refinername:link, .ms-ref-refinername:visited, .ms-ref-allSec .handle_label{
+color: #353535 !important;
+}
+
+
+
+/* ========= Toolbar content blocks  ==========*/
+/* === Visual/Branding === */
+.ellucian-toolbar {
+	background-color:#f4f4f4;
+	border:1px solid #e0e0e0;
+}
+.ellucian-toolbar-item {
+	color:#ffffff;
+	
+}
+.ellucian-toolbar-icon.fa, .ellucian-toolbar .ellucian-toolbar-item  img {
+	border:1px solid #800000;
+	border-radius: 50%;
+	background-color:#004b8d;
+}
+.ellucian-toolbar-item:hover .ellucian-toolbar-icon.fa,
+.ellucian-toolbar-item:hover .ellucian-toolbar-icon  img {
+	background-color:#ffffff;
+	color:#004b8d;
+}
+.ellucian-toolbar-item-text {
+    text-transform: uppercase;
+    font: bold 0.9em/1.3 "Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	color:#231f20
+}
+
+
+/* === Structure ===*/
+.ellucian-toolbar {
+	width:auto;
+	margin:0px auto; 
+	text-align:left;
+}
+
+.ellucian-toolbar-item {
+	width:100%;
+	padding:10px;
+	vertical-align:top;
+	display:inline-block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-decoration:none;
+}
+.ellucian-toolbar-item:hover {
+	text-decoration:none;
+}
+
+.ellucian-toolbar-icon {
+	width: 50px;
+	height: 50px;
+	vertical-align:middle;
+	text-align: center;
+	display:inline-block;
+	font-size:0px;
+	margin-right:10px;
+  -webkit-transition: all 160ms linear;
+  -o-transition: all 160ms linear;
+  transition: all 160ms linear;
+}
+.ellucian-toolbar-icon.fa, .ellucian-toolbar .ellucian-toolbar-item  img {
+	font-size:0px;
+}
+
+.ellucian-toolbar-icon.fa:before {
+	font-size:32px;
+	line-height: 50px;
+}
+.ellucian-toolbar .ellucian-toolbar-item  img {
+	display:inline;
+	padding:5px;
+	width:auto;
+	max-width:40px;
+	margin-right:10px;
+  -webkit-transition: all 160ms linear;
+  -o-transition: all 160ms linear;
+  -webkit-transition: all  160ms linear;
+  -o-transition: all  160ms linear;
+  transition: all  160ms linear;
+}
+.ellucian-toolbar-item-text {
+    display: inline-block;
+	vertical-align:middle;
+}
+
+
+@media (min-width:992px) {
+	.ellucian-toolbar {
+		text-align:center;
+	}
+	.ellucian-toolbar-item {
+		width:12%;
+		min-width:110px;
+	}
+		
+	.ellucian-toolbar-icon {
+		display:block;
+		margin:0px auto 5px;
+	}
+
+	.ellucian-toolbar-item-text {
+		display: block;
+	}
+}
+
+/* ======= CUSTOM WNE STYLES ======== */
+
+
+.l-auxbar {
+	    background-color: #f6f6f6;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.l-auxbar {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:end;
+	    -ms-flex-pack:end;
+	        justify-content:flex-end;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+}
+
+.m-suitelinks {
+	-webkit-box-flex:1;
+	    -ms-flex:1 1 auto;
+	        flex:1 1 auto;
+	text-align:right;
+}
+
+.m-auxbar-actions {
+	display:none;
+}
+@media (min-width:768px) {
+	.m-auxbar-actions {
+		display:block;
+	}
+}
+.m-welcome-wrapper {
+	-webkit-box-flex:1;
+	    -ms-flex:1 1 auto;
+	        flex:1 1 auto;
+	text-align:right;
+	padding-right:27px;
+}
+.m-welcome {
+	font-weight:bold;
+	margin-left:10px;
+}
+.ms-welcome-root {
+	padding:0px;
+}
+@media (min-width:768px) {
+	.m-welcome-wrapper {
+		-webkit-box-flex:0;
+		    -ms-flex:0 0 auto;
+		        flex:0 0 auto;
+		text-align:left;
+		padding-right:0px;		
+	}
+}
+.m-search {
+    margin:0px auto 20px;
+}
+
+#SearchBox {
+	padding:0px 10px;
+	background-color:transparent;
+}
+.ms-srch-sb {
+	display:block;
+}
+
+.ms-srch-sb-border {
+	border-color:#dadada;
+}
+
+.ms-srch-sb>input {
+	height:auto;
+	padding:5px;
+	font-size:0.875rem;
+	background-color:#ffffff;
+	width:80%;
+}
+
+.ms-srch-sb-navLink, .ms-srch-sb-searchLink {
+	margin-top:4px;
+}
+
+@media (min-width:768px) {
+	.m-search {
+		position: absolute;
+		top: 81px;
+		right: 20px;
+	}
+	.ms-srch-sb>input {
+		width:200px;
+	}
+}
+
+#s4-ribbonrow {
+	position:static;
+	-webkit-box-flex:0;
+	    -ms-flex:0 0  auto;
+	        flex:0 0  auto;
+	height:auto !important;
+}
+
+.ms-cui-topBar2.ms-cui-topBarMaximized, .ms-cui-topBar2 {
+	border-bottom-width:0px;
+}
+
+div.ms-cui-TabRowRight {
+	margin-top:0px;
+}
+
+.ms-cui-tabContainer {
+	position:absolute;
+	left:0px;
+	top:51px;
+}
+@media (min-width:768px) {
+	#s4-ribbonrow {
+		position:static;
+		-webkit-box-flex:1;
+		    -ms-flex:1 1 auto;
+		        flex:1 1 auto;
+		height:auto !important;
+	}
+}
+
+/* navigation */
+#ellucian-globalnav-tab {
+	display:block;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox {
+	display:none;
+} 
+
+@media (min-width:1200px) {
+	#ellucian-globalnav-tab {
+		display:none;
+	}
+
+	#DeltaTopNavigation .ms-core-listMenu-horizontalBox {
+		display:block;
+	}
+}
+
+
+#DeltaTopNavigation.m-nav-global  .root > li, 
+#DeltaTopNavigation.m-nav-global .root > li > ul {
+	 display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-ms-flex-pack: center;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-ms-flex-align: start;
+	-webkit-box-align: start;
+	        align-items: flex-start;
+}
+#DeltaTopNavigation.m-nav-global .root > li > ul, 
+#DeltaTopNavigation.m-nav-global .root > li > a, 
+#DeltaTopNavigation.m-nav-global .root > li > ul > li	 {
+	-ms-flex-order: 0;
+	-webkit-box-ordinal-group: 1;
+	        order: 0;
+	-ms-flex: 0 1 auto;
+	-webkit-box-flex: 0;
+	        flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}
+	
+.m-nav-global {
+	background-color:#003c71;
+	border-bottom:2px solid rgba(255,255,255,0.2);
+}
+
+#DeltaTopNavigation .selected.menu-item {
+	background-color:transparent;
+	color:#fdb813
+}
+
+#DeltaTopNavigation {
+	margin:0px;
+}
+
+.ms-core-listMenu-horizontalBox,
+#DeltaTopNavigation.m-nav-global ul {
+	padding:0px;
+	display:block;
+}
+
+#DeltaTopNavigation.m-nav-global li a {
+	text-transform:uppercase;
+	font-weight: normal;
+	font-size: .875rem;
+	font-family:"Proxima N W01 Bold", Helvetica, Arial, sans-serif;
+	line-height:1.5;
+	
+	padding: 15px 0px;
+	color:#ffffff;
+	border-width:0px;
+}
+#DeltaTopNavigation.m-nav-global li a > span {
+    padding: 0px 20px;
+    display: inline-block;
+    border-left: 1px solid #ffffff;
+	}
+	
+#DeltaTopNavigation.m-nav-global li:first-child a > span {
+	border-left-width:0px;
+}
+
+#DeltaTopNavigation.m-nav-global .root > li > a {
+	padding:13px 10px;
+	border-left-width:0px;
+	display:none;
+}
+#DeltaTopNavigation.m-nav-global .root > li > a  .menu-item-text {
+    position: absolute;
+    top: -2000px;
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+    display: block;
+}
+#DeltaTopNavigation.m-nav-global .root > li > a:after {
+    content: "\f015";
+    display: inline-block;
+    font: normal normal normal 1.5rem/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.ms-core-listMenu-verticalBox .dynamic-children.additional-background ,
+.ms-core-listMenu-horizontalBox .dynamic-children.additional-background {
+    background-image: none;
+    padding-right: 0px
+}
+.ms-core-listMenu-verticalBox .dynamic .dynamic-children.additional-background ,
+.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background {
+	background-image:none;
+}
+
+#DeltaTopNavigation.m-nav-global  .dynamic {
+	list-style:none;
+}
+#DeltaTopNavigation.m-nav-global  .dynamic a {
+	
+	font-weight: normal;
+	font-size: .85rem;
+	font-family:"Proxima N W01 Reg", Helvetica, Arial, sans-serif;
+	line-height:1.25;
+	color: #004b8d;
+	padding:5px 10px;
+}
+
+#DeltaTopNavigation.m-nav-global .dynamic a > span {
+	padding:0px;
+	border-left-width:0px;
+}
+
+.dynamic-children.additional-background:after {
+    content: "\f0a9";
+    display: inline-block;
+    font: normal normal normal 14px/1.2 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding: 0px 0px 0px 0px;
+    width: 1.28571429em;
+    text-align: center;
+	
+}
+.hover .dynamic-children.additional-background:after {
+    content: "\f0d7";
+}
+#DeltaTopNavigation.m-nav-global ul.dynamic {
+	display:block;
+	width:200px;
+}
+
+
+
+
+/* Page master and layout grids */
+#mainbody {
+	padding:20px 20px 0px;
+}
+
+.l-grid *, .l-grid *:before, .l-grid *:after {
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+
+.t-grid-highlight {
+	background-color:#004b8d;
+	color:#ffffff;
+	padding-top:20px
+}
+
+@media ( min-width:992px) {
+	.t-grid-split {
+		/* Opera Mobile */
+		background: -o-linear-gradient(left, #eaeaea 1px, #f6f6f6 1px);
+		/* Firefox for Android */
+		/* WebKit browsers */
+		background: -webkit-linear-gradient(left, #eaeaea 1px, #f6f6f6 1px);
+		/* IE10, Firefox, Opera */
+		background-image: -webkit-linear-gradient(left, #eaeaea 1px, #f6f6f6 1px);
+		background-image: -o-linear-gradient(left, #eaeaea 1px, #f6f6f6 1px);
+		background-image: linear-gradient(90deg, #eaeaea 1px, #f6f6f6 1px);
+		background-size: 33.333%;
+		background-position: 100% 0px;
+		background-repeat: repeat-y;
+		padding:20px 0px;
+		margin-top:-20px;
+		margin-bottom:0px;
+	}
+}
+
+
+/* general module styles */
+.l-grid .ms-viewheadertr, .l-aux  .ms-viewheadertr{
+	 display:none;
+}
+
+.m-module h2 {
+	font-weight: normal;
+    font-size: 1.75rem;
+    font-family: "ProximaNW01-XCdLight", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0px;
+    text-transform: uppercase;
+    background-color: #f6f6f6;
+    color: #004b8d;
+    padding: 0px 20px 0px 0px;
+    vertical-align: middle;
+	margin-bottom:10px;
+}
+
+.m-module h2:before {
+	content:"\f1b0";
+    display: inline-block;
+    font: normal normal normal 22px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    background-color: #004b8d;
+    border-left: 5px solid #fdb813;
+    margin-right: 10px;
+    color: #ffffff;
+    padding: 11px;
+    vertical-align: top;
+}
+.t-grid-highlight .m-module h2 {
+	background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+.t-grid-highlight .m-module h2:before {
+	background-color: #fdb813;
+    border-left: 5px solid rgba(0,0,0,0.4);
+}
+
+.m-module-controls {
+	text-align: right;
+    padding: 5px 15px;
+    border-right: 5px solid #004b8d;
+    box-sizing: border-box;
+	background-color:#f6f6f6;
+	color:#004b8d;
+}
+
+.t-grid-split .col-md-4 .m-module-controls {
+	background-color:#efefef;
+}
+
+.m-module-icon.fa {
+	-webkit-box-flex:10;
+	    -ms-flex:0 0 auto;
+	        flex:0 0 auto;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	padding: 15px;
+}
+.m-module-icon.fa:before {
+	font-size:20px;
+	-webkit-box-flex:0;
+	    -ms-flex:0 0 auto;
+	        flex:0 0 auto;
+}
+
+.m-module-icon.m-module-action {
+    background-color: #004b8d;
+    background-image: -webkit-gradient(linear, right top, left top, from(#004b8d), color-stop(45%, #004b8d), color-stop(45%, #fdb813), to(#fdb813));
+    background-image: -webkit-linear-gradient(right, #004b8d, #004b8d 45%, #fdb813 45%, #fdb813);
+    background-image: -o-linear-gradient(right, #004b8d, #004b8d 45%, #fdb813 45%, #fdb813);
+    background-image: linear-gradient(to left, #004b8d, #004b8d 45%, #fdb813 45%, #fdb813);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+	-webkit-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+    color: #ffffff;
+	text-decoration:none;
+	font-size:0px;
+	padding:15px 15px 15px 20px;
+}
+.m-module-action:hover {
+	color:#004b8d;
+	text-decoration:none;
+	background-position: 0% 0%;
+}
+
+
+
+.m-module-list li {
+	border-bottom-width:0px;
+	padding: 10px 20px 10px 44px;
+	-o-text-overflow:initial;
+	   text-overflow:initial;
+	overflow:visible;
+	white-space: normal;
+	position:relative;
+}
+.m-module-list li:before {
+    content: "\f054"; /* chevron right*/
+    display: inline-block;
+    font: normal normal normal 18px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    left: 20px;
+    top: 13px;
+    position: absolute;
+	z-index:1;
+	color:#fdb813;
+}
+
+/* Alerts */
+.m-notification {
+	background-color:#ffe097;
+	color:#444444;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:start;
+	    -ms-flex-pack:start;
+	        justify-content:flex-start;
+	-webkit-box-align:stretch;
+	    -ms-flex-align:stretch;
+	        align-items:stretch;
+}
+
+.m-notification-icon {
+    background-color: #fdb813;
+    color: #aa0000;
+}
+
+.m-notification-text {
+	padding:10px 15px;
+	-webkit-box-flex:1 1 auto;
+	    -ms-flex:1 1 auto;
+	        flex:1 1 auto;
+}
+.m-notification-headline {
+	font-family:"Proxima N W01 Bold",Helvetica, Arial, sans-serif;
+}
+
+
+
+/* Unread Messaages */
+.m-messages {
+	background-color:#3c3c3c;
+	color:#ffffff;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:start;
+	    -ms-flex-pack:start;
+	        justify-content:flex-start;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+}
+
+.m-messages-icon {
+    background-color: #aa0000;
+    color: #ffffff;
+}
+.t-messages-none .m-messages-icon  {
+	 background-color: #aaaaaa;
+}
+
+.m-messages-text {
+	margin:0px 15px;
+	-webkit-box-flex:1 1 auto;
+	    -ms-flex:1 1 auto;
+	        flex:1 1 auto;
+}
+
+
+/* Campus Apps */
+.m-campusapps-grid {
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.m-campusapps .m-campusapps-tile {
+	-webkit-box-flex:1;
+	    -ms-flex:1 1 33%;
+	        flex:1 1 33%;
+	position:relative;
+	border-bottom: 0px;
+    list-style-type: none;
+    padding: 0px; 
+    -o-text-overflow: none; 
+       text-overflow: none;
+    white-space: inherit;
+}
+.m-campusapps-tile:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+a.m-campusapps-tile-content, a:visited.m-campusapps-tile-content {
+	position: absolute;
+	
+	text-align: center;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	white-space: normal;
+	background-color:#004b8d;
+	color:#ffffff;
+	border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #ffffff;
+	-webkit-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+}
+a.m-campusapps-tile-content:hover {
+	color:#fdb813;
+}
+
+.m-campusapps-tile-media {
+	padding:15px 15px 0px;
+	float:none;
+	width:100%;
+	display:block;
+}
+#mainbody .m-campusapps-tile-media img {
+	width:50%;
+	max-width:60%;
+}
+.m-campusapps-tile .fa {
+	font-size:40px;
+}
+
+
+.m-campusapps-tile-title {
+	position:absolute;
+	bottom:10px;
+	padding:0px 10px;
+	line-height:1.25;
+	font-size:0.875em;
+	text-align:left;
+	display:block;
+	width:100%;
+	float:none;
+	left:0;
+}
+
+@media ( min-width:768px) {
+	.m-campusapps .m-campusapps-tile {
+	-ms-flex-preferred-size:13%;
+	    flex-basis:13%;
+	}
+}
+@media ( min-width:992px) {
+	.m-campusapps .m-campusapps-tile {
+	-ms-flex-preferred-size:33%;
+	    flex-basis:33%;
+	}
+}
+
+@media ( min-width:1200px) {
+	.m-campusapps .m-campusapps-tile {
+	-ms-flex-preferred-size:25%;
+	    flex-basis:25%;
+	}
+}
+
+
+/* Announcements */
+.m-announcements {
+	padding-bottom:15px;
+}
+
+.m-announcements h2:before {
+    content: "\f0a1"; /* bullhorn */
+}
+
+.m-announcements .t-announcement-sticky:before  {
+	color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 50%;
+    background: #aa0000;
+    border: 3px solid rgba(255,255,255,0.5);
+    left: 13px;
+    top: 10px;
+    font-size: 13px;
+}
+.m-announcements .t-announcement-none:before  {
+	color: #bbbbbb;
+}
+.m-announcements .m-announcement-headline,
+.m-announcements .m-announcement-headline:visited {
+	font-size:0.875rem ;
+	font-weight:bold;
+	padding-bottom:5px;
+	color:#004b8d;
+}
+.m-announcement-date {
+	padding-bottom:5px;
+	color:#777777;
+}
+
+/* Feeds */
+.m-campusfeeds {
+	padding-bottom:15px;
+}
+
+
+.m-campusfeeds.generic h2:before {
+	content: "\f09e"; /* rss */
+}
+.m-campusfeeds.news  h2:before {
+	content: "\f1ea"; /* newspaper-o  */
+}
+.m-campusfeeds.posts  h2:before {
+	content: "\f27b"; /* fa-commenting-o  */
+}
+.m-campusfeeds.events  h2:before {
+	content: "\f073"; /* calendar */
+}
+
+.m-campusfeeds .t-campusfeeds-none:before  {
+	color: #bbbbbb;
+}
+.m-campusfeeds .m-campusfeed-headline,
+.m-campusfeeds .m-campusfeed-headline:visited {
+	font-size:0.875rem ;
+	font-weight:bold;
+	padding-bottom:5px;
+	color:#004b8d;
+}
+.m-campusfeeds-date {
+	padding-bottom:5px;
+	color:#777777;
+}
+
+.m-campusfeeds-detail-headline {
+	font-family:"Proxima N W01 Bold",Helvetica, Arial, sans-serif;
+	padding-bottom:5px;
+}
+.m-campusfeeds-detail {
+	border-bottom-width:0px;
+}
+.m-campusfeeds-detail-controls {
+	text-align:right;
+	padding:5px 10px;
+}
+
+/* Teamsites */
+.m-teamsites {
+    padding:10px 20px;
+    
+}
+@media (min-width:768px) {
+	.m-teamsites {
+		-webkit-column-count: 3;
+		        column-count: 3;
+		-webkit-column-gap: 20px;
+		        column-gap: 20px;
+		-webkit-column-rule: 1px solid rgba(255,255,255,0.1);
+		        column-rule: 1px solid rgba(255,255,255,0.1);
+	}
+}
+
+.m-teamsites h4 {
+	color:#ffffff;
+	border-bottom:1px solid rgba(255,255,255,0.1);
+	padding-bottom:10px;
+}
+.m-teamsites .m-module-list {
+	padding-bottom:0.875em;
+}
+
+.m-teamsites .m-module-list li {
+	padding:5px 10px 5px 25px;
+}
+
+.m-teamsites .m-module-list li:before {
+	left:2px;
+	top:8px;
+}
+.t-grid-highlight .m-teamsites  a {
+	color:#ffffff;
+}	
+.t-grid-highlight .m-teamsites  a:hover,
+.t-grid-highlight .m-teamsites  a:focus {
+	color:#fdb813;
+}	
+
+
+
+/* =======  Patches ======== */
+/* fix for flyouts not working
+/* Can't have a positioned element within an overflow;  it honors th overflow rule, and gets cut off. 
+The trick:  put the coordinate resetter OUTSIDE of the overflowed container.  The outermost div, in this case.  
+Then we reset the inner divs to static positioning, taking them out of the equation.  */
+.ms-webpart-zone div[id^="WebPartWPQ"][webpartid],
+.ms-webpart-zone div[id^="WebPartWPQ"][webpartid].ms-WPBorder,  
+.ms-webpart-zone div[id^="WebPartWPQ"][webpartid].ms-wpContentDivSpace { 
+	overflow:auto; 
+	position:static; 
+} 
+.ms-webpartzone-cell {
+	position:relative;
+}
+.ms-vb-title.ms-positionRelative {
+	position:static;
+}
+
+
+/*   Pictures of the Week Patch: fixes image stretching.   */
+.ellucian-pictures-rotator {
+	height:200px;
+}
+
+.galleria-image img {
+	height:auto !important;
+}
+
+/* Picture Library Slideshow Patch (used with EllucianServicesFunctions.js) */
+.ellucian-ms-picturelibrary td, .ellucian-ms-picturelibrary span {
+	height:auto !important;
+	width:100% !important;
+}
+.ellucian-ms-picturelibrary td {
+	padding:0px;
+}
+
+ .ellucian-ms-picturelibrary span {
+	 display:inline !important;
+ }
+
+.ellucian-ms-picturelibrary div {
+	display:block !important;
+	height:auto !important;
+	width:100% !important;
+}
+.ellucian-ms-picturelibrary .ms-WPBody table a > img:first-child,
+.ellucian-ms-picturelibrary .ms-WPBody table img {
+	width:auto;
+	height:auto;
+	max-height:100%;
+	max-width:100%;
+}
+
+.ellucian-ms-picturelibrary table tr:first-child {
+	background-color:#000;
+}
+
+.ellucian-ms-picturelibrary-caption {
+	background-color:#000;
+	background-color:rgba(0,0,0,.5);
+	position:absolute;
+	bottom:41px;
+}
+.ellucian-ms-picturelibrary-caption br {
+	display:none;
+}
+
+.ellucian-ms-picturelibrary .ms-slideshow-title:empty,
+.ellucian-ms-picturelibrary .ms-slideshow-description:empty {
+	display:none !important;
+}
+
+.ellucian-ms-picturelibrary .ms-slideshow-title,
+.ellucian-ms-picturelibrary .ms-slideshow-description {
+	display:block !important;
+	color:#fff;
+}
+.ellucian-ms-picturelibrary .ms-slideshow-title {
+	padding:10px 10px 5px;
+	font-weight:bold;
+	font-size:14px;
+}
+.ellucian-ms-picturelibrary .ms-slideshow-description {
+	padding:0px 10px 10px;
+}
+.ellucian-ms-picturelibrary-sidebar .ellucian-ms-picturelibrary-slide:after {
+	content: " ";
+	display: table;
+	clear:both;
+}
+.ellucian-ms-picturelibrary-controls {
+	text-align:center;
+} 
+@media (min-width:768px) {
+	.ellucian-ms-picturelibrary-sidebar .ms-slideshow-title,
+	.ellucian-ms-picturelibrary-sidebar .ms-slideshow-description {
+		width:auto !important;
+	}
+	
+	.ellucian-ms-picturelibrary-sidebar .ellucian-ms-picturelibrary-image  {
+		float:left;
+		position:static;
+		width:70% !important;
+	}
+	.ellucian-ms-picturelibrary-sidebar .ellucian-ms-picturelibrary-caption  {
+		float:right;
+		position:static;
+		width:25% !important;
+	}
+	.ellucian-ms-picturelibrary-sidebar .ellucian-ms-picturelibrary-controls {
+		text-align:right;
+	} 
+}
+/* END Picture Library Patch (used with EllucianServicesFunctions.js) */
+
+/* Remove duplicate Add new image icon */
+.ms-list-addnew-imgSpan16 {
+    display: none;
+} 
